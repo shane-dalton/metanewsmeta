@@ -1,15 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Welcome To Twitter Sentiment Analysis Project</title>
-</head>
-<body>
-<h3>
-    The Goal of this project is to extract some meaningful
-    interpretations of the relative optimism/pessimism of common twitter influences
-    current goals include comparison of news stations for sentiment estimations.
+{% extends "base.html" %}
+{% block content %}
+    <div class="container">
+        <div class="jumbotron">
+            <div class="card-body">
+                <h5 class="card-title">Simple weather report for optimism/pessimism of the news</h5>
+                <p class="card-text">
+                    The Goal of this project is to extract some meaningful
+                    interpretations of the relative optimism/pessimism of common twitter influences.
+                </p>
+            </div>
+        </div>
+    </div>
 
-</h3>
-</body>
-</html>
+
+{% endblock %}

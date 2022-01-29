@@ -16,6 +16,8 @@ RUN apt-get install -y libssl-dev
 RUN apt-get install -y python-dev
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
+RUN apt-get install -y mysql-client
+RUN apt-get install -y libpq-dev
 RUN pwd
 RUN ls
 RUN pip install -r requirements.txt

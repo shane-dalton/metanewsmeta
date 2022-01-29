@@ -6,3 +6,8 @@ from django.views.generic import TemplateView
 
 class BaseTestView(TemplateView):
     template_name = 'sentiment_analysis/test_template.html'
+
+
+    def get_context_data(self, **kwargs):
+
+        pass

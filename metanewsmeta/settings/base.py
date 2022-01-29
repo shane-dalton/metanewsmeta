@@ -19,11 +19,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '*a#@ng7gdf(+g=5mo5n($(iveul9@we--l@)c-d4*^&jrrqiig'
+SECRET_KEY = os.environ.get('APPLICATION_SECRET_KEY','*a#@ng7gdf(+g=5mo5n($(iveul9@we--l@)c-d4*^&jrrqiig')
+TWITTER_CONSUMER_KEY = os.environ.get('TWITTER_CONSUMER_KEY')
+TWITTER_CONSUMER_SECRET = os.environ.get('TWITTER_CONSUMER_SECRET')
+TWITTER_BEARER_TOKEN = os.environ.get('TWITTER_BEARER_TOKEN')
+TWITTER_ACCESS_TOKEN = os.environ.get('TWITTER_ACCESS_TOKEN')
+TWITTER_ACCESS_TOKEN_SECRET = os.environ.get('TWITTER_ACCESS_TOKEN_SECRET')
+
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -37,6 +45,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
+    'sentiment_analysis',
+    'util'
 ]
 
 MIDDLEWARE = [
@@ -60,6 +71,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.static',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -116,5 +128,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, '../static')
+STATICFILES_DIRS = [
+ os.path.join(BASE_DIR, 'static'),
+os.path.join(BASE_DIR, 'static/admin'),
+os.path.join(BASE_DIR, 'static/site')
+
+ ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, '../static_root')
 STATIC_URL = '/static/'
