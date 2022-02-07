@@ -4,7 +4,7 @@ and displays the positivity/negativity of a subset of news stations on a daily b
 
 
 Current Progress:
-- Integration and creation of twitter content provider module
+- Integration and creation of twitter service provider abstraction for retrieving tweets
 - Integration of Vader NLP sentiment analysis of tweets
 - Initial Integration tests
 
