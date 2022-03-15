@@ -11,6 +11,5 @@ Current Progress:
 
 Planned Progress:
 - Integration of CI/CD through circle ci
-- Integration with data warehousing SQL db via Oracle free db
 - Deployment via ECS
 - Sampled Twitter decahose/1% tweet stream analysis 
