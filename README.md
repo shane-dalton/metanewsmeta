@@ -1,6 +1,10 @@
+# - This project is no longer under development due to the changes in twitter API prices - 
 # metanewsmeta
-The end goal is to produce a time series collection data pipeline that serves as a sentiment aggregation platform for news from twitter
-and displays the positivity/negativity of a subset of news stations on a daily basis.
+
+
+The end goal is to produce a time series collection data pipeline that serves as a
+sentiment aggregation platform for news from twitter and displays the
+positivity/negativity of a subset of news stations on a daily basis.
 
 
 Current Progress:
@@ -11,6 +15,5 @@ Current Progress:
 
 Planned Progress:
 - Integration of CI/CD through circle ci
-- Integration with data warehousing SQL db via Oracle free db
 - Deployment via ECS
 - Sampled Twitter decahose/1% tweet stream analysis 

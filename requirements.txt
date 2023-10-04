@@ -1,6 +1,6 @@
-django==3.2.9
+django
 requests
-sklearn
+scikit-learn
 numpy
 scipy
 matplotlib
@@ -8,7 +8,6 @@ pandas
 sympy
 Seaborn
 statsmodels
-scikit-learn
 pyzmq
 nltk
 gensim
@@ -16,6 +15,7 @@ Scrapy
 tweepy
 bokeh
 networkx
-requests
 regex
 textblob
+pytest
+pytest-django
